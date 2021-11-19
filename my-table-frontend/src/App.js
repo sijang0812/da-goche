@@ -32,6 +32,9 @@ import './App.css';
 //import {useEffect, useState} from "react";
 
 function App() { 
+  fnMoveMage() {
+  
+  }
   /*
   const [message, setMessage] = useState([]);
   useEffect(() => { 
@@ -51,7 +54,7 @@ function App() {
                 <div className="home" id="divHome">
                   <img className="imgLogo" id="imgHomeLogo" src={homeLogo} alt="로고" />
                   <div id="divHomeDlvryBtn">
-                    <img id="imgHomeDlvryBtn" src={homeDlvryBtn} alt="배달주문" />
+                    <img id="imgHomeDlvryBtn" src={homeDlvryBtn} alt="배달주문" oncClick={fnMoveMage}/>
                   </div>
                   <div id="divHomeRstrntBtn">
                     <img id="imgHomeRstrntBtn" src={homeRstrntBtn} alt="레스토랑예약" />
