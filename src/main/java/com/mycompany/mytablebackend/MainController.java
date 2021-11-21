@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MainController
 {
-	@GetMapping("main")
+	@GetMapping("Delivery")
 	public List<String> main()
 	{
-		return Arrays.asList("메인", "main");
+		return Arrays.asList("메인", "Main");
 	}
 }
