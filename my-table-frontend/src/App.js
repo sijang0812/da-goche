@@ -8,8 +8,8 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path='/Delivery' element={<Delivery />} />
-          <Route path='/Main' element={<Main />} />
+          <Route path='/main/delivery' element={<Delivery />} />
+          <Route path='/main' element={<Main />} />
           <Route render={() => <div className='error'>에러 페이지</div>} />
         </Routes>
       </Router>

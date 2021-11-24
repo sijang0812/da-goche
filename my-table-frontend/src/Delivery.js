@@ -2,8 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 
-function Delivery() { 
-  
+function Delivery({location, history}) { 
+  console.log(history);
   // const [message, setMessage] = useState([]);
   // useEffect(() => { 
   //   fetch("/Delivery").then((response) => { return response.json(); }).then(function (data) { setMessage(data); }); }, []);
