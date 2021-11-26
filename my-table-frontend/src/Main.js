@@ -4,9 +4,10 @@ import homeLogo from './img/homeLogo.png';
 import homeDlvryBtn from './img/homeDlvryBtn.png';
 import homeRstrntBtn from './img/homeRstrntBtn.png';
 
-function Main({location, history}) {
+function Main(location ) {
   console.log(history);
-  return (
+  console.log(location);
+  return (    
     <div className="home" id="bodyHome">
       <div className="home" id="divHome">
         <img className="imgLogo" id="imgHomeLogo" src={homeLogo} alt="로고" />
