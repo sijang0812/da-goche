@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 
-function Delivery() { 
+function Restaurant() { 
   // const [message, setMessage] = useState([]);
   // useEffect(() => { 
   //   fetch("/Delivery").then((response) => { return response.json(); }).then(function (data) { setMessage(data); }); }, []);
@@ -18,4 +18,4 @@ function Delivery() {
     ); 
 }
 
-export default Delivery;
+export default Restaurant;
