@@ -2,7 +2,7 @@
 import { Link } from 'react-router-dom';
 import React from 'react';
 import './App.css';
-import homeLogo from ;
+import homeLogo from './img/homeLogo.png';
 
 function Head() {
     return (
