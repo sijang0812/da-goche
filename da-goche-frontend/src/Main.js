@@ -11,7 +11,7 @@ export default function Main({ categories }) {
       <div className="divLogo">
         <p className="logo">DA GOCHE</p>
         {categories.map(category => {
-          return <Question category={category} name={category.name} />
+          return <Question category={category} key={category.id} name={category.name} url={category.url} />
         })}
       </div>
     </div>

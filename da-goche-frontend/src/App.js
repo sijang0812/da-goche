@@ -23,31 +23,33 @@ function App() {
 const CATEGORY_DEPTH1 = [
   {
     id  : 'bathroom',
-    name: '화장실'
-  },
-  {
-    id  : 'bathroom',
-    name: '화장실'
+    name: '화장실',
+    url : 'img/bathroom.png'
   },
   {
     id  : 'kitchen',
-    name: '주방'
+    name: '주방',
+    url : 'img/bathroom.png'
   },
   {
     id  : 'room',
-    name: '방'
+    name: '방',
+    url : 'img/bathroom.png'
   },
   {
     id  : 'livingroom',
-    name: '거실'
+    name: '거실',
+    url : 'img/bathroom.png'
   },
   {
     id  : 'veranda',
-    name: '베란다'
+    name: '베란다',
+    url : 'img/bathroom.png'
   },
   {
     id  : 'etc',
-    name: '기타'
+    name: '기타',
+    url : 'img/bathroom.png'
   }
 ];
 
