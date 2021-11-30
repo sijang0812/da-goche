@@ -10,6 +10,7 @@ export default function Main({ categories }) {
     <div className="bg">
       <div className="divLogo">
         <p className="logo">DA GOCHE</p>
+        <p id="pQstn">수리할 장소는 어디입니까?</p>
         {categories.map(category => {
           return <Question category={category} key={category.id} name={category.name} url={category.url} />
         })}
