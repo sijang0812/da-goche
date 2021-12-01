@@ -47,4 +47,11 @@ const CATEGORY_DEPTH1 = [
   }
 ];
 
+const CATEGORY_DEPTH2 = [
+  {
+    id  : 'bathroom',
+    name: '화장실'
+  }
+];
+
 export default App;
