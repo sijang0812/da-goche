@@ -20,8 +20,11 @@ export default function Main({ categories }) {
             return <Question category={category} />
           })}
           :
-          {categories.map(category => {
-            return <Question category={category}/>
+          {categories.sub_id.map(sub_id => {
+            <div className="divAnswr">
+              <img className="imgAnswr" src={require( './img/' +  sub_id + '.png').default} />
+              <p className="pAnswr">{sub_id}</p>
+            </div>
           })}
         </div>
       </div>

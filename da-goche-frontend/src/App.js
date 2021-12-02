@@ -6,7 +6,7 @@ import Restaurant from './Restaurant';
 
 function App() {
 
-  const [categories, setCategory] = useState(CATEGORY_DEPTH1);
+  const [categories, setCategory] = useState(CATEGORY_DEPTH);
 
   return (
     <>
@@ -20,10 +20,12 @@ function App() {
   );
 }
 
-const CATEGORY_DEPTH1 = [
+const CATEGORY_DEPTH = [
   {
-    id  : 'bathroom',
-    name: '화장실'
+    id       : 'bathroom',
+    name     : '화장실',
+    sub_id   : ['pipe', 'faucet', 'floor', 'etc'],
+    sub_name : ['배관', '수도꼭지', '바닥', '기타']
   },
   {
     id  : 'kitchen',
@@ -44,13 +46,6 @@ const CATEGORY_DEPTH1 = [
   {
     id  : 'etc',
     name: '기타'
-  }
-];
-
-const CATEGORY_DEPTH2 = [
-  {
-    id  : 'bathroom',
-    name: '화장실'
   }
 ];
 
