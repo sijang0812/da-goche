@@ -14,19 +14,13 @@ export default function Main({ categories }) {
         <p className="logo">DA GOCHE</p>
         <p id="pQstn">수리할 장소는 어디입니까?</p>
         <div onClick={() => setDepth(2)}>
-          {depth} == 1
+          {depth == 1
           ?   
-          {categories.map(category => {
-            return <Question category={category} />
-          })}
+          <div style={{color:'white'}}>11111111</div>
           :
-          {categories.sub_id&&categories.sub_id.map(sub_id => {
-            <div className="divAnswr">
-              <img className="imgAnswr" src={require( './img/' +  sub_id + '.png').default} />
-              <p className="pAnswr">{sub_id}</p>
-            </div>
-          })}
-        </div>
+          <div style={{color:'white'}}>222222</div>
+          }
+          </div>
       </div>
     </div>
   )
