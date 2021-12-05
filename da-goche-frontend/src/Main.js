@@ -14,13 +14,21 @@ export default function Main({ categories }) {
         <p className="logo">DA GOCHE</p>
         <p id="pQstn">수리할 장소는 어디입니까?</p>
         <div onClick={() => setDepth(2)}>
-          {depth == 1
+          {depth === 1
           ?   
-          <div style={{color:'white'}}>11111111</div>
-          :
-          <div style={{color:'white'}}>222222</div>
-          }
+          <div>
+            {categories.map(category => {
+              return <Question category={category} key={category.id}/>
+            })}
           </div>
+          :
+          <div>
+            {categories.map(category => {
+              return <Question category={category} key={category.id}/>
+            })}
+          </div>
+          }
+        </div>
       </div>
     </div>
   )

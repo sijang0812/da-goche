@@ -22,10 +22,14 @@ function App() {
 
 const CATEGORY_DEPTH = [
   {
-    id       : 'bathroom',
-    name     : '화장실',
-    sub_id   : ['pipe', 'faucet', 'floor', 'etc'],
-    sub_name : ['배관', '수도꼭지', '바닥', '기타']
+    id   : 'bathroom',
+    name : '화장실'  ,
+    sub  : [
+            { id : 'pipe'  , name : '배관'    }, 
+            { id : 'faucet', name : '수도꼭지'},
+            { id : 'floor' , name : '바닥'    },
+            { id : 'etc'   , name : '기타'    }
+          ]
   },
   {
     id  : 'kitchen',
