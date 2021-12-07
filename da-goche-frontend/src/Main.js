@@ -38,9 +38,6 @@ export default function Main({ categories }) {
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import Question from './Question';
-// import homeLogo from './img/homeLogo.png';
-// import homeDlvryBtn from './img/homeDlvryBtn.png';
-// import homeRstrntBtn from './img/homeRstrntBtn.png';
 
 export default function Main({ categories }) {
   const [depth, setDepth] = useState(1);
