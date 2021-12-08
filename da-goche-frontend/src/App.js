@@ -5,8 +5,8 @@ import Delivery from './Delivery';
 import Restaurant from './Restaurant';
 
 function App() {
-
   const [categories, setCategory] = useState(CATEGORY_DEPTH);
+  //const [numbers, setNumbers] = useState([1, 2, 3]);
 
   return (
     <>

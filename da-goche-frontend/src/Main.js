@@ -35,22 +35,57 @@ export default function Main({ categories }) {
   )
 }
 */
+/*
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import Question from './Question';
+import Main2 from './Main2';
 
 export default function Main({ categories }) {
   const [depth, setDepth] = useState(1);
+
+  function clickLogo(param) {
+    
+  }
 
   return (
     <div className="bg">
       <div className="divLogo">
         <p className="logo">DA GOCHE</p>
         <p id="pQstn">수리할 장소는 어디입니까?</p>
-        <div onClick={() => setDepth(2)}>
+        <div onClick={clickLogo}>
           {categories.map( category => {
-            return <Question category={category} key={category.id} />
+            return <Question category={category} key={category.id} onClick = {() => clickLogo(category.sub)}/>
           })}
+        </div>
+      </div>
+    </div>
+  )
+}
+*/
+import React, { useState, useEffect } from 'react';
+import './App.css';
+import Question from './Question';
+
+export default function Main({categories}) {
+  const [logos, setLogos] = useState({categories});
+
+  //const clickLogo = () => {
+    //setLogos(category.sub);
+  //};
+  function clickLogo(param) {
+    setLogos(param);
+  }
+
+  return (
+    <div className="bg">
+      <div className="divLogo">
+        <p className="logo">DA GOCHE</p>
+        <p id="pQstn">수리할 장소는 어디입니까?</p>
+          {categories.map( category => (
+            <Question category={category} key={category.id} />
+          ))}
+        <div onClick={() => clickLogo({categories.sub})}>
         </div>
       </div>
     </div>
