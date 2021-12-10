@@ -85,7 +85,7 @@ export default function Main({categories}) {
           {categories.map( category => (
             <Question category={category} key={category.id} />
           ))}
-        <div onClick={() => clickLogo({categories.sub})}>
+        <div onClick={() => clickLogo({categories.sub.id})}>
         </div>
       </div>
     </div>
