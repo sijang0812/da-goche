@@ -69,12 +69,14 @@ import Question from './Question';
 
 export default function Main({categories}) {
   const [logos, setLogos] = useState({categories});
+  const [cntClick, setCntClick] = useState(0);
 
   //const clickLogo = () => {
     //setLogos(category.sub);
   //};
-  function clickLogo(param) {
-    setLogos(param);
+  function clickLogo() {
+    setCntClick(cntClick++);
+    cntClick ? 1 : setLogos
   }
 
   return (
@@ -82,10 +84,10 @@ export default function Main({categories}) {
       <div className="divLogo">
         <p className="logo">DA GOCHE</p>
         <p id="pQstn">수리할 장소는 어디입니까?</p>
-          {categories.map( category => (
+          {logos.map( category => (
             <Question category={category} key={category.id} />
           ))}
-        <div onClick={() => clickLogo({categories.sub.id})}>
+        <div onClick={() => clickLogo()}>
         </div>
       </div>
     </div>
