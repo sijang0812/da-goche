@@ -71,12 +71,15 @@ export default function Main({categories}) {
   const [logos, setLogos] = useState({categories});
   const [cntClick, setCntClick] = useState(0);
 
-  //const clickLogo = () => {
-    //setLogos(category.sub);
-  //};
-  function clickLogo() {
-    setCntClick(cntClick++);
-    cntClick ? 1 : setLogos
+  console.log(logos);
+  
+  function clickLogo(param) {
+    setCntClick(1);
+    //cntClick == 1 ? alert(); : alert(cntClick);
+    setLogos(param);
+    console.log(cntClick);
+    console.log(logos);
+    alert(param);
   }
 
   return (
@@ -84,10 +87,16 @@ export default function Main({categories}) {
       <div className="divLogo">
         <p className="logo">DA GOCHE</p>
         <p id="pQstn">수리할 장소는 어디입니까?</p>
-          {logos.map( category => (
-            <Question category={category} key={category.id} />
-          ))}
-        <div onClick={() => clickLogo()}>
+        <div>
+          {logos.categories.map( 
+            category => {
+              return (
+                <div className="divAnswr" onClick={() => clickLogo("abc")}>
+                  <Question category = {category} key = {category.id} />
+                </div>
+              )
+            }
+          )}
         </div>
       </div>
     </div>
