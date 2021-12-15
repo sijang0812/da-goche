@@ -6,13 +6,13 @@ import List from './List';
 export default function Main({categories}) {
   var [logos, setLogos] = useState({categories}.categories);
   const [selectId, setSelectId] = useState("id");
-  let cntClick = 0;
+  const [cntClick, setCntClick] = useState(0);//let cntClick = 0;
 
   function clickLogo(paramId, paramSub) {
     console.log("paramId", paramId);
     console.log("paramSub", paramSub);
     console.log("logos", logos);
-    cntClick++;
+    setCntClick(cntClick + 1);//cntClick++;
     console.log("cntClick", cntClick);
     
     setLogos(paramSub);
@@ -20,7 +20,7 @@ export default function Main({categories}) {
   }
 
   return (
-    cntClick === 0
+    cntClick < 2
     ?
     <div className="bg">
       <div className="divLogo">
