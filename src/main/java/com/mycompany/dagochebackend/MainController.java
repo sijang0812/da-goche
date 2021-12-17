@@ -9,9 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MainController
 {
-	@GetMapping("main")
-	public List<String> main()
+	@GetMapping("/list")
+	//public List<String> main()
+	public String main(String srcId)
 	{
-		return Arrays.asList("메인", "main");
+		//return Arrays.asList("1", "", );
+		return "***" + "srcId" + "***";
 	}
 }

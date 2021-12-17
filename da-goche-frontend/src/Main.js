@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import Question from './Question';
 import List from './List';
+import Head from './Head';
 
 export default function Main({categories}) {
   var [logos, setLogos] = useState({categories}.categories);
@@ -23,8 +24,8 @@ export default function Main({categories}) {
     cntClick < 2
     ?
     <div className="bg">
-      <div className="divLogo">
-        <p className="logo">DA GOCHE</p>
+      <Head/>
+      <div className="divBody">
         <p id="pQstn">수리할 장소는 어디입니까?</p>
           {logos.map( 
             category => {

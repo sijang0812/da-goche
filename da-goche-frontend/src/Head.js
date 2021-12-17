@@ -6,13 +6,11 @@ import homeLogo from './img/homeLogo.png';
 
 function Head() {
     return (
-        <div>
-            <Link to="/main">
-                <div className="divLogo">
-                    <p className="logo">DA GOCHE</p>
-                </div>
-            </Link>
-        </div>
+        <Link to="/main">
+            <div className="divLogo">
+                <p className="logo">DA GOCHE</p>
+            </div>
+        </Link>
     );
 }
 

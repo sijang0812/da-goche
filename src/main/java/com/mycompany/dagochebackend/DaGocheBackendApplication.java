@@ -9,5 +9,4 @@ public class DaGocheBackendApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DaGocheBackendApplication.class, args);
 	}
-
 }
