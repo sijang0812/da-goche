@@ -7,15 +7,10 @@ import homeLogo from './img/homeLogo.png';
 function Head() {
     return (
         <div>
-            <img className="imgLogo" id="imgHomeLogo" src={homeLogo} alt="로고" />
-            <Link to="/main/restaurant">
-                <button>레스토랑예약</button>
-            </Link>
-            <Link to="/main/delivery">
-                <button>배달주문</button>
-            </Link>
             <Link to="/main">
-                <button>메인</button>
+                <div className="divLogo">
+                    <p className="logo">DA GOCHE</p>
+                </div>
             </Link>
         </div>
     );
