@@ -27,8 +27,13 @@ export default function Main({selectId}) {
     <div className="bg">
       <Head/>
       <div className="divBody">
-        <p id="pQstn">{selectId}</p>
-        <p id="pQstn">{list}</p>
+        {/* <p id="pQstn">{selectId}</p>
+        <p id="pQstn">{list}</p> */}
+        <table>
+          <tr>
+            
+          </tr>
+        </table>
       </div>
     </div>
   )

@@ -14,6 +14,7 @@ public class MainController
 	public String main(String srcId)
 	{
 		//return Arrays.asList("1", "", );
+		System.out.println(srcId+"********************");
 		return "***" + "srcId" + "***";
 	}
 }
