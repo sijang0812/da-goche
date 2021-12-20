@@ -30,9 +30,11 @@ export default function Main({selectId}) {
         {/* <p id="pQstn">{selectId}</p>
         <p id="pQstn">{list}</p> */}
         <table>
-          <tr>
-            
-          </tr>
+          <c:forEach items="${list}">
+            <tr>
+          
+            </tr>
+          </c:forEach>
         </table>
       </div>
     </div>
