@@ -77,10 +77,10 @@ export default function Main({selectId}) {
         {/* <p id="pQstn">{selectId}</p>
         <p id="pQstn">{list}</p> */}
         <table>
-          {list.map( 
+          {list&&list.map( 
             item => {
               return (
-                <tr>
+                <tr key="{item}">{item}
                   <td>{item.tlsId}</td>
                   <td>{item.tlsNm}</td>
                 </tr>
