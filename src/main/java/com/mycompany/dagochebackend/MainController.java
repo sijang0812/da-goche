@@ -26,6 +26,7 @@ public class MainController
 		mapParam.put("tlsNm", "첼라");
 		listReturn.add(mapParam);
 		
+		System.out.println(listReturn);
 		return listReturn;
 	}
 }

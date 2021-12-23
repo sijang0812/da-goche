@@ -51,6 +51,7 @@ import Head from './Head';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 export default function Main({selectId}) {
+  console.log({selectId});
   const [list, setList] = useState();
   
   function callback(param) {
@@ -66,29 +67,31 @@ export default function Main({selectId}) {
         method : 'GET'
       }).then((res) => {
         callback(res.data);
+
+        return (
+          <div className="bg">
+            <Head/>
+            <div className="divBody">
+              {/* <p id="pQstn">{selectId}</p>
+              <p id="pQstn">{list}</p> */}
+              <table>
+                {/* {list&&list.map( 
+                  item => {
+                    return (
+                      <tr key="{item}">{item}
+                        <td>{item.tlsId}</td>
+                        <td>{item.tlsNm}</td>
+                      </tr>
+                    )
+                  }
+                )} */}
+              <tr><td>{selectId}</td></tr>
+              </table>
+            </div>
+          </div>
+        )
+        
       })
     }, []
   );
-
-  return (
-    <div className="bg">
-      <Head/>
-      <div className="divBody">
-        {/* <p id="pQstn">{selectId}</p>
-        <p id="pQstn">{list}</p> */}
-        <table>
-          {list&&list.map( 
-            item => {
-              return (
-                <tr key="{item}">{item}
-                  <td>{item.tlsId}</td>
-                  <td>{item.tlsNm}</td>
-                </tr>
-              )
-            }
-          )}
-        </table>
-      </div>
-    </div>
-  )
 }
