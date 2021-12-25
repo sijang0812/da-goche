@@ -68,30 +68,26 @@ export default function Main({selectId}) {
       }).then((res) => {
         callback(res.data);
 
-        return (
-          <div className="bg">
-            <Head/>
-            <div className="divBody">
-              {/* <p id="pQstn">{selectId}</p>
-              <p id="pQstn">{list}</p> */}
-              <table>
-                {/* {list&&list.map( 
-                  item => {
-                    return (
-                      <tr key="{item}">{item}
-                        <td>{item.tlsId}</td>
-                        <td>{item.tlsNm}</td>
-                      </tr>
-                    )
-                  }
-                )} */}
-              <tr><td>{selectId}</td></tr>
-              </table>
-            </div>
-          </div>
-        )
-        
       })
     }, []
   );
+
+  return (
+    <div className="bg">
+      <Head/>
+      <div className="divBody">
+        <p id="pQstn">abc</p>
+          {/* {list&&list.map( 
+            item => {
+              return (
+                <tr key="{item}">{item}
+                  <td>{item.tlsId}</td>
+                  <td>{item.tlsNm}</td>
+                </tr>
+              )
+            }
+          )} */}
+      </div>
+    </div>
+  )
 }

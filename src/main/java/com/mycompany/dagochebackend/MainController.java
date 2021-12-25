@@ -13,9 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class MainController
 {
 	@GetMapping("/list")
-	public ArrayList<Map<String, Object>> main()
-	//public String main(String srcId)
+	//public ArrayList<Map<String, Object>> main()
+	public String main(String srcId)
 	{
+		String jsonReturn = "";
 		ArrayList<Map<String, Object>> listReturn = new ArrayList<Map<String, Object>>();
 		Map<String, Object> mapParam = new HashMap<String, Object>();
 		
@@ -26,7 +27,9 @@ public class MainController
 		mapParam.put("tlsNm", "첼라");
 		listReturn.add(mapParam);
 		
+		jsonReturn = 
+		
 		System.out.println(listReturn);
-		return listReturn;
+		return jsonReturn;
 	}
 }
