@@ -59,18 +59,15 @@ export default function Main({selectId}) {
     console.log("[list]: " + list);
   }
 
-  useEffect(
-    () => {
-      axios({
-        srcId  : {selectId},
-        url    : '/list',
-        method : 'GET'
-      }).then((res) => {
-        callback(res.data);
-
-      })
-    }, []
-  );
+  const url = "http://localhost:3000/list";
+  axios.get(url)
+  .then(function(response){
+    console.log("성공");
+    alert(response.data);
+  })
+  .catch(function(error){
+    console.log("실패");
+  })
 
   return (
     <div className="bg">
