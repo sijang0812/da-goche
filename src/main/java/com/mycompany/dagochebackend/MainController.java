@@ -22,9 +22,9 @@ public class MainController
 		
 		mapParam.put("tlsId", "001");
 		mapParam.put("tlsNm", "몽키스패너");
-		System.out.println("mapParam:" + mapParam);
+		//System.out.println("mapParam:" + mapParam);
 		listReturn.add(mapParam);
-		System.out.println("listReturn:" + listReturn);
+		//System.out.println("listReturn:" + listReturn);
 		
 /*		mapParam.put("tlsId", "002");
 		mapParam.put("tlsNm", "첼라");
@@ -32,6 +32,6 @@ public class MainController
 		listReturn.add(mapParam);
 		System.out.println("listReturn:" + listReturn);*/
 		
-		return jsonReturn;
+		return "aaaaa";
 	}
 }
