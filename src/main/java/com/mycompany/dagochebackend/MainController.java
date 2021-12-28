@@ -14,7 +14,8 @@ public class MainController
 {
 	@GetMapping("/list")
 	//public ArrayList<Map<String, Object>> main()
-	public String main(String srcId)
+	public Map<String, Object> main()
+	//public String main(String srcId)
 	{
 		String jsonReturn = "java";
 		List<Map<String, Object>> listReturn = new ArrayList<Map<String, Object>>();
@@ -32,6 +33,7 @@ public class MainController
 		listReturn.add(mapParam);
 		System.out.println("listReturn:" + listReturn);*/
 		
-		return "aaaaa";
+		//return "aaaaa";
+		return mapParam;
 	}
 }

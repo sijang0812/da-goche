@@ -52,7 +52,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 export default function Main({selectId}) {
   console.log({selectId});
-  const [list, setList] = useState();
+  const [list, setList] = useState("test");
   
   function callback(param) {
     setList(param);
@@ -64,6 +64,7 @@ export default function Main({selectId}) {
   .then(function(response){
     console.log("성공");
     alert(response.data);
+    setList(response.data.tlsId);
   })
   .catch(function(error){
     console.log("실패");
@@ -73,7 +74,7 @@ export default function Main({selectId}) {
     <div className="bg">
       <Head/>
       <div className="divBody">
-        <p id="pQstn">abc</p>
+        <p id="pQstn">{list}</p>
           {/* {list&&list.map( 
             item => {
               return (
