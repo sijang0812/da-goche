@@ -63,8 +63,8 @@ export default function Main({selectId}) {
   axios.get(url)
   .then(function(response){
     console.log("성공");
-    alert(response.data);
-    setList(response.data.tlsId);
+    console.log(response.data);
+    setList(response.data);
   })
   .catch(function(error){
     console.log("실패");
@@ -74,17 +74,17 @@ export default function Main({selectId}) {
     <div className="bg">
       <Head/>
       <div className="divBody">
-        <p id="pQstn">{list}</p>
-          {/* {list&&list.map( 
-            item => {
-              return (
-                <tr key="{item}">{item}
-                  <td>{item.tlsId}</td>
-                  <td>{item.tlsNm}</td>
-                </tr>
-              )
-            }
-          )} */}
+        {/* <p id="pQstn">{list}</p> */}
+        {list&&list.map( 
+          item => {
+            return (
+              <tr key="{item}">{item}
+                <td>{item.tlsId}</td>
+                <td>{item.tlsNm}</td>
+              </tr>
+            )
+          }
+        )}
       </div>
     </div>
   )

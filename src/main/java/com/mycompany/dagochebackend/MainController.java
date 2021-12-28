@@ -13,27 +13,28 @@ import org.springframework.web.bind.annotation.RestController;
 public class MainController
 {
 	@GetMapping("/list")
-	//public ArrayList<Map<String, Object>> main()
-	public Map<String, Object> main()
+	public List<Map<String, Object>> main()
+	//public Map<String, Object> main()
 	//public String main(String srcId)
 	{
 		String jsonReturn = "java";
 		List<Map<String, Object>> listReturn = new ArrayList<Map<String, Object>>();
-		Map<String, Object> mapParam = new HashMap<String, Object>();
+		Map<String, Object> mapParam1 = new HashMap<String, Object>();
+		Map<String, Object> mapParam2 = new HashMap<String, Object>();
 		
-		mapParam.put("tlsId", "001");
-		mapParam.put("tlsNm", "몽키스패너");
-		//System.out.println("mapParam:" + mapParam);
-		listReturn.add(mapParam);
-		//System.out.println("listReturn:" + listReturn);
+		mapParam1.put("tlsId", "001");
+		mapParam1.put("tlsNm", "몽키스패너");
+		System.out.println("mapParam:" + mapParam1);
+		listReturn.add(mapParam1);
+		System.out.println("listReturn:" + listReturn);
 		
-/*		mapParam.put("tlsId", "002");
-		mapParam.put("tlsNm", "첼라");
-		System.out.println("mapParam:" + mapParam);
-		listReturn.add(mapParam);
-		System.out.println("listReturn:" + listReturn);*/
+		mapParam2.put("tlsId", "002");
+		mapParam2.put("tlsNm", "첼라");
+		System.out.println("mapParam:" + mapParam2);
+		listReturn.add(mapParam2);
+		System.out.println("listReturn:" + listReturn);
 		
 		//return "aaaaa";
-		return mapParam;
+		return listReturn;
 	}
 }
