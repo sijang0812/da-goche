@@ -52,11 +52,11 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 export default function Main({selectId}) {
   console.log({selectId});
-  const [list, setList] = useState("test");
+  const [list, setList] = useState([]);
   
   function callback(param) {
     setList(param);
-    console.log("[list]: " + list);
+    console.log("[list]: " + list[0]);
   }
 
   const url = "http://localhost:3000/list";
@@ -65,6 +65,8 @@ export default function Main({selectId}) {
     console.log("성공");
     console.log(response.data);
     setList(response.data);
+    console.log("list:" + list[0].tlsId);
+    console.log("list:" + list[1]);
   })
   .catch(function(error){
     console.log("실패");
