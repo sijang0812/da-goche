@@ -52,20 +52,18 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 export default function Main({selectId}) {
   console.log({selectId});
-  const [list, setList] = useState([]);
-  
-  function callback(param) {
-    setList(param);
-    console.log("[list]: " + list[0]);
-  }
-
+  //const [list, setList] = useState([]);
+  let list = [{ tlsId : 'test', tlsNm : '테스트'}];
+  console.log("**list0**" + list[0].tlsNm);
   const url = "http://localhost:3000/list";
   axios.get(url)
   .then(function(response){
     console.log("성공");
-    setList(response.data);
+    list = response.data; //setList(response.data);
     //setList(JSON.stringify(response.data));
-    console.log("list:" + list[0].tlsNm);
+    console.log("**list**" + list);
+    console.log("**list0**" + list[0].tlsNm);
+    console.log("**list1**" + list[1].tlsNm);
   })
   .catch(function(error){
     console.log("실패");
@@ -79,10 +77,14 @@ export default function Main({selectId}) {
         {list&&list.map( 
           item => {
             return (
-              <tr key="{item}">
+              <table>
+              <tbody>
+              <tr key={item.tlsId}>
                 <td>{item.tlsId}</td>
                 <td>{item.tlsNm}</td>
               </tr>
+              </tbody>
+              </table>
             )
           }
         )}
