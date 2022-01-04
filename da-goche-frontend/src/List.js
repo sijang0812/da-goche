@@ -63,10 +63,9 @@ export default function Main({selectId}) {
   axios.get(url)
   .then(function(response){
     console.log("성공");
-    console.log(response.data);
     setList(response.data);
-    console.log("list:" + list[0].tlsId);
-    console.log("list:" + list[1]);
+    //setList(JSON.stringify(response.data));
+    console.log("list:" + list[0].tlsNm);
   })
   .catch(function(error){
     console.log("실패");
@@ -80,7 +79,7 @@ export default function Main({selectId}) {
         {list&&list.map( 
           item => {
             return (
-              <tr key="{item}">{item}
+              <tr key="{item}">
                 <td>{item.tlsId}</td>
                 <td>{item.tlsNm}</td>
               </tr>
