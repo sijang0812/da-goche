@@ -56,6 +56,7 @@ export default function Main({selectId}) {
   let list = [{ tlsId : 'test', tlsNm : '테스트'}];
   console.log("**list0**" + list[0].tlsNm);
   const url = "http://localhost:3000/list";
+  list = [{ tlsId : 'testa', tlsNm : '테스트a'}];
   axios.get(url)
   .then(function(response){
     console.log("성공");
