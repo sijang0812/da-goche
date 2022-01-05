@@ -57,14 +57,18 @@ export default function Main({selectId}) {
   console.log("**list0**" + list[0].tlsNm);
   const url = "http://localhost:3000/list";
   list = [{ tlsId : 'testa', tlsNm : '테스트a'}];
+  console.log("**list**" + list);
+  console.log("**list0**" + list[0].tlsNm);
   axios.get(url)
   .then(function(response){
+    list = [{ tlsId : 'testb', tlsNm : '테스트b'}];
+    console.log("**list**" + list);
+    console.log("**list0**" + list[0].tlsNm);
     console.log("성공");
     list = response.data; //setList(response.data);
     //setList(JSON.stringify(response.data));
     console.log("**list**" + list);
     console.log("**list0**" + list[0].tlsNm);
-    console.log("**list1**" + list[1].tlsNm);
   })
   .catch(function(error){
     console.log("실패");
