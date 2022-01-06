@@ -81,7 +81,7 @@ export default function Main({selectId}) {
         {/* <p id="pQstn">{list}</p> */}
         {list&&list.map( 
           item => {
-            return (
+            return ( 
               <table>
               <tbody>
               <tr key={item.tlsId}>
