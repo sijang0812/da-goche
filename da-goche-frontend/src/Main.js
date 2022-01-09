@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './App.css';
 import Question from './Question';
 import List from './List';
@@ -41,14 +42,8 @@ export default function Main({categories}) {
       </div>
     </div>
     :
-    // <>
-    //   <Router>
-    //     <Routes>
-    //       <Route path='/list' element={<List selectId={selectId} />} />
-    //       <Route render={() => <div className='error'>에러 페이지</div>} />
-    //     </Routes>
-    //   </Router>
-    // </>
-    <List selectId = {selectId} />
+    <Link to="/list">
+      <List selectId = {selectId}/>
+    </Link>
   )
 }

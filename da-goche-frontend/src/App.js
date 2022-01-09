@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Main from './Main';
+import List from './List';
 import Delivery from './Delivery';
 import Restaurant from './Restaurant';
 
@@ -13,6 +14,7 @@ function App() {
       <Router>
         <Routes>
           <Route path='/main' element={<Main categories={categories} />} />
+          <Route path='/list' element={<List />} />
           <Route render={() => <div className='error'>에러 페이지</div>} />
         </Routes>
       </Router>
