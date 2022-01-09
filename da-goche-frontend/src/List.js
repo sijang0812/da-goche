@@ -49,6 +49,7 @@ import axios from 'axios';
 import './App.css';
 import Head from './Head';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Question from './Question';
 
 export default function Main({selectId}) {
   console.log({selectId});
@@ -79,17 +80,23 @@ export default function Main({selectId}) {
       <Head/>
       <div className="divBody">
         {/* <p id="pQstn">{list}</p> */}
-        {list&&list.map( 
+        {list.map( 
           item => {
             return ( 
-              <table>
-              <tbody>
-              <tr key={item.tlsId}>
-                <td>{item.tlsId}</td>
-                <td>{item.tlsNm}</td>
-              </tr>
-              </tbody>
-              </table>
+              // <table>
+              // <tbody>
+              // <tr>
+              //   <div key={item.tlsId}></div>
+              //   <td>{item.tlsId}</td>
+              //   <td>{item.tlsNm}</td>
+              // </tr>
+              // </tbody>
+              // </table>
+              <Question
+                key={item.tlsId}
+                tlsId={item.tlsId}
+
+              />
             )
           }
         )}

@@ -1,11 +1,11 @@
 import React from 'react';
 
 export default function Question({ category }) {    
-    //category.sub[0].id
+    console.log("테스트",category);
     return (
         <div>
-            <img className="imgAnswr" src={require( './img/' +  category.id + '.png').default } />
-            <p className="pAnswr">{category.name}</p>
+            <img className="imgAnswr" src={require( './img/' +  category.tlsId + '.png').default } />
+            <p className="pAnswr">{category.tlsNm}</p>
         </div>
     )
 }
