@@ -1,4 +1,28 @@
 /*
+import logo from './logo.svg';
+import './App.css';
+import React from 'react';
+
+function Restaurant() { 
+  // const [message, setMessage] = useState([]);
+  // useEffect(() => { 
+  //   fetch("/Delivery").then((response) => { return response.json(); }).then(function (data) { setMessage(data); }); }, []);
+    return ( 
+      <div className="App"> 
+        <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo"/>
+        <p> Edit <code>src/App.js</code> and save to reload. </p> 
+        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer" > Learn React </a> 
+        <ul> {message.map((text, index) => <li key={`${index}-${text}`}>{text}</li>)} </ul>
+        </header>
+      </div> 
+    ); 
+}
+
+export default Restaurant;
+*/
+
+/*
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './App.css';
@@ -52,7 +76,6 @@ export default function Main({categories}) {
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './App.css';
-import Question from './Question';
 import List from './List';
 import Head from './Head';
 
@@ -82,22 +105,15 @@ export default function Main({categories}) {
             category => {
               return (
                 cntClick == 0
-                      ?
+                ?
                 <div className="divAnswr" key = {category.id}>
-                  {/* <Question category = {category} key = {category.id} /> */}
-                  
                   <img className="imgAnswr" src={require( './img/' +  category.id + '.png').default } onClick={() => clickLogo(category.id, category.sub)}/>
-                 
                   <p className="pAnswr">{category.name}</p>
                 </div>
                 :
-                <div className="divAnswr" key = {category.id}>
-                  {/* <Question category = {category} key = {category.id} /> */}
-                  
+                <div className="divAnswr" key = {category.id}>                  
                   <Link to="/list">
-
                   <img className="imgAnswr" src={require( './img/' +  category.id + '.png').default } onClick={() => <List selectId = {selectId}/>}/>
-                 
                   <p className="pAnswr">{category.name}</p>
                   </Link>
                 </div>

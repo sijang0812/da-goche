@@ -48,8 +48,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 import Head from './Head';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Question from './Question';
+import Item from './Item';
 
 export default function Main({selectId}) {
   console.log({selectId});
@@ -79,25 +78,9 @@ export default function Main({selectId}) {
     <div className="bg">
       <Head/>
       <div className="divBody">
-        {/* <p id="pQstn">{list}</p> */}
         {list.map( 
           item => {
-            return ( 
-              // <table>
-              // <tbody>
-              // <tr>
-              //   <div key={item.tlsId}></div>
-              //   <td>{item.tlsId}</td>
-              //   <td>{item.tlsNm}</td>
-              // </tr>
-              // </tbody>
-              // </table>
-              <Question
-                key={item.tlsId}
-                tlsId={item.tlsId}
-
-              />
-            )
+            <Item item = {item} key={item.tlsId} />
           }
         )}
       </div>

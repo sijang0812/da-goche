@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Main from './Main';
 import List from './List';
-import Delivery from './Delivery';
-import Restaurant from './Restaurant';
 
 function App() {
   const [categories, setCategory] = useState(CATEGORY_DEPTH);
