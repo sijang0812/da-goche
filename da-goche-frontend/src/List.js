@@ -79,9 +79,9 @@ export default function Main({selectId}) {
       <Head/>
       <div className="divBody">
         {list.map( 
-          item => {
+          item => (
             <Item item = {item} key={item.tlsId} />
-          }
+            )
         )}
       </div>
     </div>
