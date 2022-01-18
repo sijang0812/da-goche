@@ -75,6 +75,7 @@ export default function Main({categories}) {
 */
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 import './App.css';
 import List from './List';
 import Head from './Head';
@@ -83,6 +84,8 @@ export default function Main({categories}) {
   var [logos, setLogos] = useState({categories}.categories);
   const [selectId, setSelectId] = useState("id");
   const [cntClick, setCntClick] = useState(0);//let cntClick = 0;
+  const url = "http://localhost:3000/list";
+  let list = [{ tlsId : 'test57', tlsNm : '테스트57'}];
 
   function clickLogo(paramId, paramSub) {
     console.log("paramId", paramId);
@@ -95,8 +98,25 @@ export default function Main({categories}) {
     console.log("logos", logos);
   }
 
-  return (
+  function fnCallList(selectId) {
+    // java -> react
+    axios.get(url)
+    .then(function(response){
+      setCntClick(cntClick + 1);
+      console.log("성공");
+      list = response.data; //setList(response.data);
+      //setList(JSON.stringify(response.data));
+      console.log("**list11111**" + list);
+      console.log("**list111111**" + list[0].tlsNm);
 
+      <List list = {list} />
+    })
+    .catch(function(error){
+      console.log("실패");
+    })
+  }
+
+  return (
     <div className="bg">
       <Head/>
       <div className="divBody">
@@ -107,13 +127,14 @@ export default function Main({categories}) {
                 cntClick == 0
                 ?
                 <div className="divAnswr" key = {category.id}>
-                  <img className="imgAnswr" src={require( './img/' +  category.id + '.png').default } onClick={() => clickLogo(category.id, category.sub)}/>
+                  <img className="imgAnswr" src={require( './img/' +  category.id + '.png').default } onClick={() => clickLogo(category.id, category.sub)} />
                   <p className="pAnswr">{category.name}</p>
                 </div>
                 :
                 <div className="divAnswr" key = {category.id}>                  
                   <Link to="/list">
-                  <img className="imgAnswr" src={require( './img/' +  category.id + '.png').default } onClick={() => <List selectId = {selectId}/>}/>
+                  {/* <img className="imgAnswr" src={require( './img/' +  category.id + '.png').default } onClick={() => fnCallList(selectId) } /> */}
+                  <img className="imgAnswr" src={require( './img/' +  category.id + '.png').default } onClick={() => <List list = {list} /> } />
                   <p className="pAnswr">{category.name}</p>
                   </Link>
                 </div>
