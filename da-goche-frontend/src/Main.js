@@ -134,7 +134,7 @@ export default function Main({categories}) {
                 <div className="divAnswr" key = {category.id}>                  
                   <Link to="/list">
                   {/* <img className="imgAnswr" src={require( './img/' +  category.id + '.png').default } onClick={() => fnCallList(selectId) } /> */}
-                  <img className="imgAnswr" src={require( './img/' +  category.id + '.png').default } onClick={() => <List list = {list} /> } />
+                  <img className="imgAnswr" src={require( './img/' +  category.id + '.png').default } onClick={() => <List selectId = {selectId} /> } />
                   <p className="pAnswr">{category.name}</p>
                   </Link>
                 </div>

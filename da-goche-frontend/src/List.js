@@ -50,17 +50,13 @@ import './App.css';
 import Head from './Head';
 import Item from './Item';
 
-export default function List(list) {
-  console.log(list);
-  console.log("list파라미터:" + list[0]);
-  let list2 = list;
-  console.log("**list0**" + JSON.stringify(list2));
-  console.log("**list0**" + JSON.stringify(list));
+export default function List({category}) {
+  console.log("테스트 ",category);
   // axios.get(url)
   // .then(function(response){
   //   setCntClick(cntClick + 1);
   //   console.log("성공");
-  //   list = response.data; //setList(response.data);
+     list2 = response.data; //setList(response.data);
   //   //setList(JSON.stringify(response.data));
   //   console.log("**list1**" + list);
   //   console.log("**list1**" + list[0].tlsNm);
@@ -72,7 +68,13 @@ export default function List(list) {
     <div className="bg">
       <Head/>
       <div className="divBody">
-        
+        {/* {list2.map( 
+          item => {
+            return (
+            <Item item = {item} key={item.tlsId} />
+            )
+          }
+        )} */}
       </div>
     </div>
   )
