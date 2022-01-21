@@ -108,8 +108,6 @@ export default function Main({categories}) {
       //setList(JSON.stringify(response.data));
       console.log("**list11111**" + list);
       console.log("**list111111**" + list[0].tlsNm);
-
-      <List list = {list} />
     })
     .catch(function(error){
       console.log("실패");
