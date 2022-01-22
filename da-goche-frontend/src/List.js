@@ -49,9 +49,14 @@ import axios from 'axios';
 import './App.css';
 import Head from './Head';
 import Item from './Item';
+import qs from 'qs';
 
-export default function List({category}) {
-  console.log("테스트1",category);
+export default function List({ location }) {
+  const query = qs.parse(location.search, {
+    ignoreQueryPrefix: true, //이 설정을 통해 문자열 맨 앞의 ?를 생략
+  });
+  console.log(query);
+  const showDetail = query.detail === "true"; //쿼리의 파싱 결과 값은 문자열
   // axios.get(url)
   // .then(function(response){
   //   setCntClick(cntClick + 1);
@@ -69,13 +74,14 @@ export default function List({category}) {
     <div className="bg">
       <Head/>
       <div className="divBody">
-        {list2.map( 
+        {/* {list2.map( 
           item2 => {
             return (
             <Item item = {item2} key={item2.tlsId} />
             )
           }
-        )}
+        )} */}
+        {showDetail && <p>hey, can you see me now?</p>}
       </div>
     </div>
   )

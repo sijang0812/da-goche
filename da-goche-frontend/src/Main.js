@@ -121,18 +121,29 @@ export default function Main({categories}) {
         <p id="pQstn">수리할 장소는 어디입니까?</p>
           {logos.map( 
             category => {
+              const curUrl = `/list/${category}`;
               return (
                 cntClick == 0
                 ?
                 <div className="divAnswr" key = {category.id}>
-                  <img className="imgAnswr" src={require( './img/' +  category.id + '.png').default } onClick={() => clickLogo(category.id, category.sub)} />
+                  <img className="imgAnswr" src={require( './img/' +  category.id + '.png').default } 
+                  onClick={() => clickLogo(category.id, category.sub)} />
                   <p className="pAnswr">{category.name}</p>
                 </div>
                 :
                 <div className="divAnswr" key = {category.id}>                  
-                  <Link to="/list">
+                  {/* <Link to="/list"> */}
+                  <Link to={
+                    {
+                    "pathname":"/list",
+                    "search": "?id=abc",
+                    "hash":""
+                    }
+                  }
+                  >
                   {/* <img className="imgAnswr" src={require( './img/' +  category.id + '.png').default } onClick={() => fnCallList(selectId) } /> */}
-                  <img className="imgAnswr" src={require( './img/' +  category.id + '.png').default } onClick={() => <List category = {category} /> } />
+                  <img className="imgAnswr" src={require( './img/' +  category.id + '.png').default } 
+                  onClick={() => <List category = {category} key={category.tlsId} /> } />
                   <p className="pAnswr">{category.name}</p>
                   </Link>
                 </div>
