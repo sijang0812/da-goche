@@ -53,7 +53,7 @@ import qs from 'qs';
 
 export default function List({ location }) {
   const query = qs.parse(location.search, {
-    ignoreQueryPrefix: true, //이 설정을 통해 문자열 맨 앞의 ?를 생략
+    ignoreQueryPrefix: true //이 설정을 통해 문자열 맨 앞의 ?를 생략
   });
   console.log(query);
   const showDetail = query.detail === "true"; //쿼리의 파싱 결과 값은 문자열
