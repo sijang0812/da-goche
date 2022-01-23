@@ -135,9 +135,9 @@ export default function Main({categories}) {
                   {/* <Link to="/list"> */}
                   <Link to={
                     {
-                    "pathname":"/list",
-                    "search": "?id=abc",
-                    "hash":""
+                    pathname: `/list`,
+                    search: `?id=abc`,
+                    hash:``
                     }
                   }
                   >

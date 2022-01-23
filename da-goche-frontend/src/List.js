@@ -45,18 +45,29 @@ export default function Main({selectId}) {
 */
 
 import React, { useState, useEffect } from 'react';
+import { withRouter } from "react-router";
 import axios from 'axios';
 import './App.css';
 import Head from './Head';
 import Item from './Item';
 import qs from 'qs';
+import querystring from 'query-string';
 
-export default function List({ location }) {
+export default function List({withRouter}) {
+  /*
   const query = qs.parse(location.search, {
     ignoreQueryPrefix: true //이 설정을 통해 문자열 맨 앞의 ?를 생략
   });
   console.log(query);
   const showDetail = query.detail === "true"; //쿼리의 파싱 결과 값은 문자열
+  */
+
+  /*
+  const query = querystring.parse(location);
+  console.log(">>>", query, "<<<");
+  */
+  console.log(withRouter);
+
   // axios.get(url)
   // .then(function(response){
   //   setCntClick(cntClick + 1);
@@ -81,7 +92,7 @@ export default function List({ location }) {
             )
           }
         )} */}
-        {showDetail && <p>hey, can you see me now?</p>}
+        {/* {showDetail && <p>hey, can you see me now?</p>} */}
       </div>
     </div>
   )
