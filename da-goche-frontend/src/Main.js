@@ -133,14 +133,15 @@ export default function Main({categories}) {
                 :
                 <div className="divAnswr" key = {category.id}>                  
                   {/* <Link to="/list"> */}
-                  <Link to={
+                  {/* <Link to={
                     {
                     pathname: `/list`,
                     state: `?id=test`,
                     hash:``
                     } 
                   }
-                  >
+                  > */}
+                  <Link to = "/list" state={{props:category.id}}>
                   {/* <img className="imgAnswr" src={require( './img/' +  category.id + '.png').default } onClick={() => fnCallList(selectId) } /> */}
                   <img className="imgAnswr" src={require( './img/' +  category.id + '.png').default } 
                   onClick={() => console.log("a") } />
