@@ -53,7 +53,8 @@ import Item from './Item';
 import qs from 'qs';
 import querystring from 'query-string';
 
-export default function List({withRouter}) {
+export default function List({ history, location, match }) {
+  alert(this.search);
   /*
   const query = qs.parse(location.search, {
     ignoreQueryPrefix: true //이 설정을 통해 문자열 맨 앞의 ?를 생략
@@ -66,7 +67,6 @@ export default function List({withRouter}) {
   const query = querystring.parse(location);
   console.log(">>>", query, "<<<");
   */
-  console.log(withRouter);
 
   // axios.get(url)
   // .then(function(response){
