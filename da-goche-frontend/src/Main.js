@@ -143,8 +143,7 @@ export default function Main({categories}) {
                   > */}
                   <Link to = "/list" state={{props:category.id}}>
                   {/* <img className="imgAnswr" src={require( './img/' +  category.id + '.png').default } onClick={() => fnCallList(selectId) } /> */}
-                  <img className="imgAnswr" src={require( './img/' +  category.id + '.png').default } 
-                  onClick={() => console.log("a") } />
+                  <img className="imgAnswr" src={require( './img/' +  category.id + '.png').default } />
                   <p className="pAnswr">{category.name}</p>
                   </Link>
                 </div>
