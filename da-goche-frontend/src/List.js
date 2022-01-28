@@ -53,9 +53,9 @@ import Item from './Item';
 import qs from 'qs';
 import querystring from 'query-string';
 
-export default function List({ history, location, match }) {
-  const location2 = useLocation();
-  const { props } = location2.state;
+export default function List() {
+  const location = useLocation();
+  const { props } = location.state;
   console.log("url의props: ", props);
   /*
   const query = qs.parse(location.search, {
@@ -70,18 +70,18 @@ export default function List({ history, location, match }) {
   console.log(">>>", query, "<<<");
   */
 
-  // axios.get(url)
-  // .then(function(response){
-  //   setCntClick(cntClick + 1);
-  //   console.log("성공");
-  //   list = response.data; //setList(response.data);
-  //   //setList(JSON.stringify(response.data));
-  //   console.log("**list1**" + list);
-  //   console.log("**list1**" + list[0].tlsNm);
-  // })
-  // .catch(function(error){
-  //   console.log("실패");
-  // })
+  axios.get(url)
+  .then(function(response){
+    setCntClick(cntClick + 1);
+    console.log("성공");
+    list = response.data; //setList(response.data);
+    //setList(JSON.stringify(response.data));
+    console.log("**list1**" + list);
+    console.log("**list1**" + list[0].tlsNm);
+  })
+  .catch(function(error){
+    console.log("실패");
+  })
   var list2 = [{tlsId:'a', tlsNm:'1'},{tlsId:'b', tlsNm:'2'}];
   return (
     <div className="bg">
