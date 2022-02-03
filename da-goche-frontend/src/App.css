@@ -137,10 +137,10 @@
 	padding: 0;
 }
 
-.divTopMenu li link
+/* .divTopMenu li 
 {
 	background: rgb(48, 51, 207);
-	color: rgb(247, 236, 236);
+	color: rgb(106, 197, 31);
 	display: block;
 	line-height: 100%;
 	margin: 0;
@@ -149,7 +149,7 @@
 	text-decoration: none;
 }
 
-.divTopMenu li link:hover, .divTopMenu ul li:hover link
+.divTopMenu li:hover, .divTopMenu ul li:hover
 {
 	background: rgb(48, 51, 207);
 	color: rgb(247, 236, 236);
@@ -166,4 +166,6 @@
 	
 	width: 100px;
 	z-index: 100;
-}
+} */
+
+.liMenu {}

@@ -16,8 +16,8 @@ function Head() {
             </Link>
             <div className="divTopMenu">
                 <ul>
-                    <li>전체 카테고리</li>
-                    <ul>
+                    <li className="liMenu">전체 카테고리</li>
+                    <ul className="ulDropMenu">
                         <Link to="/bathroom">
                         <li>욕실</li>
                         </Link>
