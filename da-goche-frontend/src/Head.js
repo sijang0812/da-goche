@@ -5,6 +5,10 @@ import './App.css';
 import homeLogo from './img/homeLogo.png';
 import Main from './Main';
 
+function fnDropDownMenu(e) {
+    
+}
+
 function Head() {
     return (
         <div>
@@ -16,7 +20,7 @@ function Head() {
             </Link>
             <div className="divTopMenu">
                 <ul>
-                    <li className="liMenu">전체 카테고리</li>
+                    <li className="liMenu" onMouseOver={fnDropDownMenu}>전체 카테고리</li>
                     <ul className="ulDropMenu">
                         <Link to="/bathroom">
                         <li>욕실</li>

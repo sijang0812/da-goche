@@ -137,39 +137,15 @@
 	padding: 0;
 }
 
-.divTopMenu li 
+.liMenu
 {
-	background: rgb(48, 51, 207);
-	color: rgb(106, 197, 31);
-	/* display: block;
-	line-height: 100%;
-	margin: 0;
-	padding: 0;
-	text-align: center;
-	text-decoration: none; */
-}
-/* 
-.divTopMenu li:hover, .divTopMenu ul li:hover
-{
-	background: rgb(48, 51, 207);
-	color: rgb(247, 236, 236);
-	text-decoration: none;
-}
- */
-.divTopMenu li ul
-{
-	background: rgb(48, 51, 207);
-	/* display: none;
-	height: auto;
-	border: 0;
-	position: absolute;
-	width: 100px;
-	z-index: 100; */
+	background: skyblue;
 }
 
 .ulDropMenu
 {
 	display: none;
+	background: skyblue;
 }
 
 .liMenu:hover .ulDropMenu
