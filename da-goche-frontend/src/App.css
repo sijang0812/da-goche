@@ -140,15 +140,21 @@
 .liMenu
 {
 	background: skyblue;
+	/* display: block;
+	line-height: 100%;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	text-decoration: none; */
 }
 
 .ulDropMenu
 {
 	display: none;
 	background: skyblue;
-}
-
-.liMenu:hover .ulDropMenu
-{
-	display: block;
+	/* height: auto;
+	border: 0;
+	position: absolute;
+	width: 100px;
+	z-index: 100; */
 }

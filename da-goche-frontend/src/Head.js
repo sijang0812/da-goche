@@ -1,15 +1,26 @@
 // eslint-disable-next-line
 import { Link } from 'react-router-dom';
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import homeLogo from './img/homeLogo.png';
 import Main from './Main';
 
-function fnDropDownMenu(e) {
-    
-}
-
 function Head() {
+    var dropMenuSts = "none";
+
+    function fnGetDropMenuSts(e) {
+        dropMenuSts = e.target.display;
+    }
+    
+    function fnDropDownMenu(e) {
+        // e.target.style.display = 'red';
+        if(dropMenuSts != 'none') {
+            e.target.style.display = 'none';
+        } else {
+            e.target.style.display = 'block';
+        }
+    }
+
     return (
         <div>
             <title>DA-GOCHE navigation</title>
@@ -21,7 +32,7 @@ function Head() {
             <div className="divTopMenu">
                 <ul>
                     <li className="liMenu" onMouseOver={fnDropDownMenu}>전체 카테고리</li>
-                    <ul className="ulDropMenu">
+                    <ul className="ulDropMenu" onChange={fnGetDropMenuSts}>
                         <Link to="/bathroom">
                         <li>욕실</li>
                         </Link>
