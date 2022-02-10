@@ -6,21 +6,13 @@ import homeLogo from './img/homeLogo.png';
 import Main from './Main';
 
 function Head() {
-    var openDropMenu = false;
-
-    function fnGetDropMenuSts(e) {
-        e.target.style.background = 'blue';
-    }
-    
-    function fnDropDownMenu(e) {
+    function fnOverDropDownMenu(e) {
         // e.target.style.display = 'red';
-        if(!openDropMenu) {
-            document.getElementById('ulDropMenu').style.display = "none";
-            
-        } else {
-            document.getElementById('ulDropMenu').style.display = "block";
-        }
-        openDropMenu = !openDropMenu;
+        document.getElementById('ulDropMenu').style.display = "block";
+    }
+
+    function fnOutDropDownMenu(e) {
+        document.getElementById('ulDropMenu').style.display = "none";
     }
 
     return (
@@ -33,8 +25,8 @@ function Head() {
             </Link>
             <div className="divTopMenu">
                 <ul>
-                    <li className="liMenu" onMouseOver={fnDropDownMenu}>전체 카테고리</li>
-                    <ul id="ulDropMenu" className="ulDropMenu" onChange={fnGetDropMenuSts}>
+                    <li className="liMenu" onMouseOver={fnOverDropDownMenu} onMouseOut={fnOutDropDownMenu}>전체 카테고리</li>
+                    <ul id="ulDropMenu" className="ulDropMenu">
                         <Link to="/bathroom">
                         <li>욕실</li>
                         </Link>

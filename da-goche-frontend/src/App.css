@@ -50,7 +50,7 @@
 	background-repeat: repeat;
  	background-size: cover;
  	background-position: center;
-	background-color: rgb( 0, 0, 0 );
+	background-color: rgb( 255, 255, 255 );
 }
 
 /* #bodyHome
@@ -62,7 +62,7 @@
 {
 	position: absolute;
 	width: 80%;
-    height: 20%;
+    height: 15%;
     /* background-color: red; */
     left: 10%;
     top: 1%;
@@ -72,7 +72,7 @@
 {
 	color: rgb(255, 165, 0);
     /* font-family: Hamurz; */
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
 }
 
@@ -124,7 +124,7 @@
 {
 	position: absolute;
 	width: 10%;
-	height: 20%;
+	height: 15%;
 	left: 0%;
 	top: 1%;
 	margin: 0;
@@ -139,9 +139,10 @@
 
 .liMenu
 {
-	background: skyblue;
-	/* display: block;
+	background: black;
 	line-height: 100%;
+	height: 100%;
+	/* display: block;
 	margin: 0;
 	padding: 0;
 	text-align: center;
