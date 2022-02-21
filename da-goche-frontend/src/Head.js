@@ -23,6 +23,9 @@ function Head() {
                     <p className="logo">DA GOCHE</p>
                 </div>
             </Link>
+            <div className="divSearch">
+                <input id="inputSearch" name="inputSearch" style={{background:"red"}, {bottom: "0%"}, {height: "50%"}, {width: "80%"}}></input>
+            </div>
             <div className="divTopMenu">
                 <ul>
                     <li className="liMenu" onMouseOver={fnOverDropDownMenu} onMouseOut={fnOutDropDownMenu}>전체 카테고리</li>

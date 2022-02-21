@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .App-link {
@@ -61,7 +61,7 @@
 .divLogo
 {
 	position: absolute;
-	width: 80%;
+	width: 20%;
     height: 15%;
     /* background-color: red; */
     left: 10%;
@@ -70,10 +70,20 @@
 
 .logo
 {
-	color: rgb(255, 165, 0);
+	/* color: rgb(255, 165, 0); */
     /* font-family: Hamurz; */
+	color: rgb(0, 0, 0);
     font-size: 40px;
     font-weight: bold;
+}
+
+.divSearch
+{
+	left: 30%;
+	width: 40%;
+	height: 10%;
+	top: 6%;
+	position: absolute;
 }
 
 .divBody
@@ -107,12 +117,12 @@
 	height: 10%;
 	display: inline-block;
 	text-align: center;
-	color: white;
+	color: black;
 }
 
 #pQstn
 {
-	color: white;
+	color: black;
 	width: 70%;
 	text-align: center;
 	height: 5%;
