@@ -24,7 +24,7 @@ function Head() {
                 </div>
             </Link>
             <div className="divSearch">
-                <input id="inputSearch" name="inputSearch" style={{background:"red"}, {bottom: "0%"}, {height: "50%"}, {width: "80%"}}></input>
+                <input id="inputSearch" name="inputSearch" style={{background:"orange"}, {bottom: "0%"}, {height: "50%"}, {width: "80%"}}></input>
             </div>
             <div className="divTopMenu">
                 <ul>
