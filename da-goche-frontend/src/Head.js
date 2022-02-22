@@ -24,11 +24,11 @@ function Head() {
                 </div>
             </Link>
             <div className="divSearch">
-                <input id="inputSearch" name="inputSearch" style={{background:"orange"}, {bottom: "0%"}, {height: "50%"}, {width: "80%"}}></input>
+                <input id="inputSearch" name="inputSearch" style={{background:"orange", top: "25%", height: "50%", width: "80%"}}></input>
             </div>
             <div className="divTopMenu">
                 <ul>
-                    <li className="liMenu" onMouseOver={fnOverDropDownMenu} onMouseOut={fnOutDropDownMenu}>전체 카테고리</li>
+                    <ul className="liMenu" onMouseOver={fnOverDropDownMenu} onMouseOut={fnOutDropDownMenu}>〓</ul>
                     <ul id="ulDropMenu" className="ulDropMenu">
                         <Link to="/bathroom">
                         <li>욕실</li>
