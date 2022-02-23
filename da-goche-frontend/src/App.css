@@ -61,9 +61,8 @@
 .divLogo
 {
 	position: absolute;
-	width: 20%;
+	width: 15%;
     height: 15%;
-    /* background-color: red; */
     left: 10%;
     top: 1%;
 }
@@ -81,9 +80,9 @@
 {
 	position: absolute;
 	left: 30%;
-	width: 40%;
-	height: 15%;
-	top: 6%;
+	width: 60%;
+	height: 12%;
+	top: 4%;
 }
 
 .divBody
@@ -135,7 +134,7 @@
 	position: absolute;
 	width: 7%;
 	height: 12%;
-	left: 0%;
+	left: 1%;
 	top: 4%;
 	margin: 0;
 }
@@ -152,7 +151,7 @@
 	background: orange;
 	line-height: 100%;
 	height: 100%;
-	font-size: 50pt;
+	font-size: 12pt;
 	/* display: block;
 	margin: 0;
 	padding: 0;
@@ -163,10 +162,15 @@
 .ulDropMenu
 {
 	display: none;
-	background: skyblue;
+	background: white;
 	/* height: auto;
 	border: 0;
 	position: absolute;
 	width: 100px;
 	z-index: 100; */
+}
+
+.ulDropMenu li
+{
+	background: red;
 }
