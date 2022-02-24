@@ -32,25 +32,25 @@ function Head() {
                     <ul className="liMenu" onMouseOver={fnOverDropDownMenu} onMouseOut={fnOutDropDownMenu}><br/><span style={{fontSize: "40pt"}}>&nbsp;≡</span><br/><br/>&nbsp;카테고리</ul>
                     <ul id="ulDropMenu" className="ulDropMenu">
                         <Link to="/bathroom">
-                        <li>욕실</li>
+                        <ul>욕실</ul>
                         </Link>
                         <Link to="/bathroom">
-                        <li>주방</li>
+                        <ul>주방</ul>
                         </Link>
                         <Link to="/bathroom">
-                        <li>거실</li>
+                        <ul>거실</ul>
                         </Link>
                         <Link to="/bathroom">
-                        <li>다용도실/베란다</li>
+                        <ul>다용도실/베란다</ul>
                         </Link>
                         <Link to="/bathroom">
-                        <li>방/침실</li>
+                        <ul>방/침실</ul>
                         </Link>
                         <Link to="/bathroom">
-                        <li>마당/정원</li>
+                        <ul>마당/정원</ul>
                         </Link>
                         <Link to="/bathroom">
-                        <li>기타</li>
+                        <ul>기타</ul>
                         </Link>
                     </ul>
                 </ul>
